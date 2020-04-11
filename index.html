@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="holdEm d-flex justify-content-center">
+        <button class="op" id="add">+</button>
+        <button class="op" id="subtract">-</button>
+        <button class="op" id="multiply">x</button>
+        <button class="op" id="divide">/</button>
+        <h1 id="solution">solution:</h1>
+    </div>
+ 
+
+       
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+
+<style>
+
+.op{
+    height:50px;
+    width: 50px;
+    background:plum;
+    color: grey;
+}
+
+#solution{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: grey;
+}
+</style>
+
+<script>
+
+    const firstInt = prompt('please enter your first number');
+    const secondInt = prompt('please enter your second number');
+    const parsedFirstInt = parseInt(firstInt);
+    const parsedSecondInt = parseInt(secondInt);
+     let result = "";
+
+console.log (firstInt);
+console.log (secondInt);
+console.log (parsedFirstInt);
+console.log (parsedSecondInt);
+
+function operator(){
+
+}
+
+function addition(){
+    result = (parsedFirstInt + parsedSecondInt);
+    console.log(parsedFirstInt  + parsedSecondInt);
+    document.getElementById('solution').innerText= parsedFirstInt + " + " + parsedSecondInt + " = "  + result;
+
+}
+
+function subtraction(){
+    result = (parsedFirstInt - parsedSecondInt);
+    console.log(parsedFirstInt  - parsedSecondInt);
+    document.getElementById('solution').innerText= parsedFirstInt + " - " + parsedSecondInt + " = "  + result;
+
+}
+
+function multiplication(){
+    result = (parsedFirstInt * parsedSecondInt);
+    console.log(parsedFirstInt  * parsedSecondInt);
+    document.getElementById('solution').innerText= parsedFirstInt + " * " + parsedSecondInt + " = "  + result;
+}
+
+function division(){
+    result = (parsedFirstInt / parsedSecondInt);
+    console.log(parsedFirstInt  / parsedSecondInt);
+    document.getElementById('solution').innerText= parsedFirstInt + " / " + parsedSecondInt + " = "  + result;
+}
+
+document.getElementById('add').addEventListener('click', addition);
+document.getElementById('subtract').addEventListener('click', subtraction);
+document.getElementById('multiply').addEventListener('click', multiplication);
+document.getElementById('divide').addEventListener('click', division);
+document.getElementById('solution').innerText=result;
+
+</script>
